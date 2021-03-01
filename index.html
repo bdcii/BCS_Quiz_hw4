@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Quiz!!!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="./assets/css/style.css" />
+         <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    </head>
+
+    <body>
+        <a href='placeholder for local storage high scores' id="highScore">High Scores</a>
+        <p id="timerText">Timer:  </p><p id="timer">test</p>
+        <div class="info_card">
+            <div class="info_title">
+                <span>Rules / How to Play</span>
+            </div>
+            <div class="info_list">
+                <div class="info">1. The quiz will begin immediately upon clicking the Start button.</div>
+                <div class="info">2. You will have 30 seconds to answer all questions.</div>
+                <div class="info">3. Questions are multiple choice.</div>
+                <div class="info">4. You will receive points for answering questions correctly.</div>
+                <div class="info">5. FIVE seconds will be lost from the countdown timer for each incorrect answer.</div>
+                <div class="info">6. Submit your results to see how you rank on the High Score list!</div>
+            </div>
+                <div class="buttons">
+                    <button class="start">Start</button>
+                </div>
+        </div>
+
+     <div class="container">
+            <div id="question-container"></div>
+            <div id="question">What language is used to style/design websites?</div>
+            <div class="choices">
+                <button class="btn" id="choice1">HTML</button><br>
+                <button class="btn"  id="choice2">CSS</button><br>
+                <button class="btn"  id="choice3">Javascript</button><br>
+                <button class="btn" id="choice4">C++</button><br>
+                <input id="qResult" placeholder="result">
+                
+                <button class="next">Next</button>
+            </div>
+            </div>
+
+            <div class="result_container">
+                <div class="complete_msg">You've completed the quiz!</div>
+                <p>Submit your name below to see if you have the highest score!</p>
+                <div class="score_text"><span>Your score is <p></p></span></div>
+                <div class="results_buttons">
+                    <input id="name_score" placeholder="Name">
+                    <button class="submit">Submit</button>
+                    <button class="start">Play Again</button>
+                </div>
+            </div>
+
+    
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>
