@@ -1,57 +1,58 @@
 * {
-  font-family: Arial;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   box-sizing: border-box;
 }
 
 body{
-  background: rgb(245, 223, 223)
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(168, 164, 164)
+}
+
+a {
+  padding-right: 1000px;
+}
+
+p {
+  padding-left: 10px;
 }
 
 
-.info_box{
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -85%);
-}
 
 
-
-
-.info_box {
-  width: 540px;
-  background: whitesmoke;
+.info_card {
   border-radius: 5px;
-  
-
+  width: 540px;
+  background-color: rgb(245, 223, 223);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+ 
 }
 
-.info_box .info_title {
+.info_card .info_title {
   height: 60px;
   width: 100%;
-  border-bottom: 1px solid lightgray;
-  display: flex;
-  align-items: center;
-  padding: 0 35px;
+  text-align: center;
   font-size: 20px;
   font-weight: 600;
+  padding: 10px;
 }
 
-.info_box .info_list {
-  padding: 15px 35px;
+.info_card .info_list {
+  padding-bottom: 4px;
 }
 
-.info_box .info_list .info {
-  margin: 5px 0;
-  font-size: 17px;
+
+.info_card .info_list .info {
+  padding: 4px;
 }
 
-.info_box .info_list .info span{
-  font-weight: 600;
-  color: purple;
-}
 
-.info_box .buttons{
+.buttons {
   height: 60px;
   display: flex;
   align-items: center;
@@ -60,11 +61,11 @@ body{
   border-top: 1px solid lightgray
 }
 
-.info_box .buttons button{
+.buttons .start{
   margin: 0 5px;
   height: 40px;
   width: 100px;
-  border: 1px solid purple;
+  border: 1px solid black;
   background: rgb(53, 50, 50);
   border-radius: 5px;
   color: rgb(245, 223, 223);
@@ -73,6 +74,126 @@ body{
   cursor: pointer;
 }
 
-.hidden {
-  display: none;
+.container {
+  opacity: 0.0;         /*Opacity for testing*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
+
+.container.activeInfo{
+  z-index: 5;
+  opacity: 1;
+}
+
+
+.container #question {
+  border-radius: 5px;
+  width: 540px;
+  background-color: rgb(245, 223, 223);
+  
+  text-align: center;
+  font-weight:600;
+  padding: 10px;
+}
+.container .choices {
+  align-items: center;
+  height: 60px;
+  margin: 1rem;
+  padding: 10px;
+}
+
+.container .choices .btn {
+  display: block;
+  align-items: center;
+  width: 500px;
+  height: 40px;
+  background-color: rgb(236, 142, 245);
+  border-radius: 5px;
+}
+
+
+
+.container .choices .btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2px 2px rgb(29, 28, 28)
+
+}
+
+.container .choices #qResult {
+  height: 30px;
+  background-color: rgb(168, 164, 164);
+  border-color: transparent;
+  pointer-events: none;
+  font-size: 30px;
+  color:rgb(245, 223, 223);
+  
+}
+
+.container .choices .next {
+  justify-content: flex-end;
+  height: 60px;
+  width: 120px;
+  font-size: 20px;
+  border-radius: 4px;
+
+}
+
+
+.container .choices .next:hover {
+cursor: pointer;
+box-shadow: 0 0 2px 2px rgb(29, 28, 28)
+}
+
+.result_container{
+  border-radius: 5px;
+  width: 540px;
+  background-color: rgb(245, 223, 223);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  opacity: 0.0;           /*opacity for testing*/
+  transform: translate(-50%, -50%);
+}
+
+
+
+.results_buttons {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  
+  padding: 0 35px;
+  border-top: 1px solid lightgray
+}
+
+.results_buttons .start{
+    justify-content: flex-end;
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid black;
+    background: rgb(53, 50, 50);
+    border-radius: 5px;
+    color: rgb(245, 223, 223);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  
+}
+
+.results_buttons .submit{
+  margin-right: 60px;
+}
+
+
+.correct {
+  color:  rgb(79, 231, 87);
+}
+
+.incorrect {
+    color: darkred;
+  }
