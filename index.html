@@ -13,12 +13,12 @@
 </head>
 
 <body>
-    <a href='placeholder for local storage high scores' id="highScore">High Scores</a>
+    <div id="highScore"><a href="highScores.html">High Scores</a></div>
 
     <p id="timerText">Timer: </p>
-    <p class="timer"></p>
+    <p class="timer">45</p>
 
-    <div class="info_card visible">
+    <div class="info_card">
         <div class="info_title">
             <span>Rules / How to Play</span>
         </div>
@@ -30,22 +30,23 @@
             <div class="info">5. FIVE seconds will be lost from the countdown timer for each incorrect answer.</div>
             <div class="info">6. Submit your results to see how you rank on the High Score list!</div>
         </div>
-        <div class="buttons">
-            <button id="start_btn" class="start">Start</button>
-        </div>
+
+        <button id="start_btn" class="start">Start</button>
     </div>
 
-    <div class="container invisible">
-        <div id="question-container"></div>
-        <div id="question">What language is used to style/design websites?</div>
-        <div class="choices">
-            <button class="btn" id="choice1">HTML</button><br>
-            <button class="btn" id="choice2">CSS</button><br>
-            <button class="btn" id="choice3">Javascript</button><br>
-            <button class="btn" id="choice4">C++</button><br>
-            <input id="qResult" placeholder="result">
+    <div id="question-container" class="invisible">
+        <div class="container">
 
-            <button class="next">Next</button>
+            <div id="question">What language is used to style/design websites?</div>
+            <div class="choices">
+                <button class="btn" id="choice1">HTML</button><br>
+                <button class="btn" id="choice2">CSS</button><br>
+                <button class="btn" id="choice3">Javascript</button><br>
+                <button class="btn" id="choice4">C++</button><br>
+                <input id="qResult" placeholder="result">
+
+                <button class="next">Next</button>
+            </div>
         </div>
     </div>
 
@@ -62,6 +63,7 @@
 
 
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/questions.js"></script>
 </body>
 
 </html>

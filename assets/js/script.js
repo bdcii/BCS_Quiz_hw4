@@ -1,7 +1,7 @@
 //Setting variables for my functions
 var rules = document.querySelector(".info_card")
-var start = document.querySelector("#start_btn");
-var questionContainer = document.querySelector(".container");
+var start = document.getElementById("start_btn");
+var questionContainer = document.getElementById("question-container");
 var results_box = document.querySelector(".results_container");
 
 var timerEl = document.querySelector(".timer");
@@ -29,18 +29,19 @@ function setTimer(){
 
 //code runs when startGame is initiated
 function startGame(){
-    rules.classList.add("invisible");
-    rules.classList.remove("visible");
-    questionContainer.classList.remove("invisible");
-    questionContainer.classList.add("visible");
-    results_box.classList.remove("visible");
-    results_box.classList.add("invisible"); 
+    rules.setAttribute("class", "invisible");
+    questionContainer.removeAttribute("class", "invisible");
+    
+    
+   
+  
+ 
 }
 
-start.addEventListener("click", function() {
-    setTimer();
-   //code to start timer
-   startGame();
-});
+function generateQuestion(){
+
+}
+
+start.onclick = startGame;
 
 
