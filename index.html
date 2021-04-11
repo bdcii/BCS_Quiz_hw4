@@ -15,8 +15,8 @@
 <body>
     <div id="highScore"><a href="highScores.html">High Scores</a></div>
 
-    <p id="timerText">Timer: </p>
-    <p class="timer">45</p>
+    <p class="timer">Timer: </p>
+    <p id="timerText">0</p>
 
     <div class="info_card">
         <div class="info_title">
@@ -26,7 +26,6 @@
             <div class="info">1. The quiz will begin immediately upon clicking the Start button.</div>
             <div class="info">2. You will have 30 seconds to answer all questions.</div>
             <div class="info">3. Questions are multiple choice.</div>
-            <div class="info">4. You will receive points for answering questions correctly.</div>
             <div class="info">5. FIVE seconds will be lost from the countdown timer for each incorrect answer.</div>
             <div class="info">6. Submit your results to see how you rank on the High Score list!</div>
         </div>
@@ -37,27 +36,23 @@
     <div id="question-container" class="invisible">
         <div class="container">
 
-            <div id="question">What language is used to style/design websites?</div>
-            <div class="choices">
-                <button class="btn" id="choice1">HTML</button><br>
-                <button class="btn" id="choice2">CSS</button><br>
-                <button class="btn" id="choice3">Javascript</button><br>
-                <button class="btn" id="choice4">C++</button><br>
-                <input id="qResult" placeholder="result">
+            <h3 id="question"></h3>
+            <div id="questionOptions" class="choices">
 
-                <button class="next">Next</button>
             </div>
         </div>
     </div>
 
-    <div class="result_container invisible">
-        <div class="complete_msg">You've completed the quiz!</div>
-        <p>Submit your name below to see if you have the high score!</p>
-        <div class="score_text"><span>Your score is <p></p></span></div>
-        <div class="results_buttons">
-            <input id="name_score" placeholder="Name">
-            <button class="submit">Submit</button>
-            <button class="start">Play Again</button>
+    <div id="results" class="invisible">
+        <div class="result_container">
+            <div class="complete_msg">You've completed the quiz!</div>
+            <p>Submit your initials below to see if you have the high score!</p>
+            <p>Your score is <span id="score_text"></span></p>
+            <div class="results_buttons">
+                <input type="text" id="initials" placeholder="Enter initials here">
+                <button id="submit">Submit</button>
+                <!-- <button class="start">Play Again</button> -->
+            </div>
         </div>
     </div>
 
