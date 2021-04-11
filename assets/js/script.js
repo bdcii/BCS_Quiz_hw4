@@ -16,7 +16,7 @@ var currentQuestionIndex = 0
 
 var timerEl = document.getElementById("timerText");
 
-var secondsLeft = 31;
+var secondsLeft = 45;
 
 
 
@@ -117,7 +117,7 @@ function highScores() {
         highscore.push(newScore);
         window.localStorage.setItem("highscore", JSON.stringify(highscore));
 
-        window.location.href = "highscores.html";
+        window.location.href = "highScores.html";
     }
 }
 
